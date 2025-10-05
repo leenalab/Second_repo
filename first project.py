@@ -1,9 +1,9 @@
-val = 'a'
-try:
-    val = int(val)
-except ValueError:
-    print(f"val {val} is not a number")
-else:
-    print(val > 0)
-finally:
-    print("This will be printed anyway") 
+message = "Never argue with stupid people, they will drag you down to their level and then beat you with experience."
+search = "r"
+result = 0
+for chars in message:
+    if chars == search:
+        result += 1
+    
+    
+print(f"Кількість search у рядку: {result}")     
