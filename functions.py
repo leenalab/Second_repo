@@ -1,5 +1,6 @@
-def greet(name: str) -> str:
-    return f"Привіт, {name}!"
+def modify_list(lst: list) -> None:
+    lst.append(4)
 
-greeting = greet("llll")
-print(greeting)
+my_list = [1, 2, 3]
+modify_list(my_list)
+print(my_list)
