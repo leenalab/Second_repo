@@ -1,5 +1,5 @@
 def greet(name: str) -> str:
     return f"Привіт, {name}!"
 
-greeting = greet("Andrii")
+greeting = greet("llll")
 print(greeting)
