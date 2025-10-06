@@ -1,8 +1,6 @@
-def discount_price(price, discount):
-    def apply_discount():
-        nonlocal price
-        price = price * (1 - discount)
-
-    apply_discount()
-
-    return price
+def format_string(string, length):
+    if len(string) >= length:
+        return string
+    else:
+        spaces = (length - len(string)) // 2
+        return " " * spaces + string
