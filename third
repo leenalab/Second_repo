@@ -1,3 +1,12 @@
+alfpha = "ABCDEFGHIJKLMNOPQRSTUVXYZ"
+text = "Brut is planning to kill me"
+cipher = ""
+key = 3
 
-from datetime import date, datetime
-datetime.now()
+for letter in text.upper():
+    if letter in alfpha:
+        letter_index = (alfpha.find(letter) + key) % len(alfpha) # 5 - 8
+        cipher += alfpha[letter_index]
+    else:
+        cipher += letter
+print(cipher)
