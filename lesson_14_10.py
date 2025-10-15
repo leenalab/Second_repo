@@ -1,9 +1,10 @@
-fh = open('test.txt', 'w+')
+fh = open('names.txt', 'w')
 fh.write('hello!')
-fh.seek(0)
+fh.close()
 
-first_two_symbols = fh.read(2)
-print(first_two_symbols)  # 'he'
+fh = open('names.txt', 'r')
+all_file = fh.read()
+print(all_file)  # 'hello!'
 
 fh.close()
 
