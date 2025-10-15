@@ -1,6 +1,10 @@
-file = open("/names.txt","w")
+fh = open('test.txt', 'w+')
+fh.write('hello!')
+fh.seek(0)
 
-name = "Nick"
+first_two_symbols = fh.read(2)
+print(first_two_symbols)  # 'he'
 
-file.write(name)
-file.close()
+fh.close()
+
+
