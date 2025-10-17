@@ -1,10 +1,15 @@
-fh = open("names.txt", "w")
-fh.write("first line\nsecond line\nthird line")
+fh = open("test.txt", "w+")
+fh.write("hello!")
+
+position = fh.tell()
+print(position)  # 6
+
+fh.seek(1)
+position = fh.tell()
+print(position)  # 1
+
+fh.read(2)
+position = fh.tell()
+print(position)  # 3
+
 fh.close()
-
-fh = open("names.txt", "r")
-lines = [el.strip() for el in fh.readlines()]
-print(lines)
-
-fh.close()
-
