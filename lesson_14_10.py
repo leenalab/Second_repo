@@ -1,15 +1,7 @@
-fh = open("test.txt", "w+")
-fh.write("hello!")
+with open("names.txt", "w") as fh:
+    fh.write("first line\nsecond line\nthird line")
 
-position = fh.tell()
-print(position)  # 6
+with open("names.txt", "r") as fh:
+    lines = [el.strip() for el in fh.readlines()]
 
-fh.seek(1)
-position = fh.tell()
-print(position)  # 1
-
-fh.read(2)
-position = fh.tell()
-print(position)  # 3
-
-fh.close()
+print(lines)
