@@ -1,7 +1,3 @@
-with open("names.txt", "w") as fh:
-    fh.write("first line\nsecond line\nthird line")
-
-with open("names.txt", "r") as fh:
-    lines = [el.strip() for el in fh.readlines()]
-
-print(lines)
+with open('names.txt', 'r', encoding='utf-8') as file:
+    content = file.read()
+    print(content)
